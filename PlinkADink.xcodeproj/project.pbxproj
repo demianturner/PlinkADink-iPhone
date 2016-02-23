@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADFDC0791C4FF4EA00AF17FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFDC0781C4FF4EA00AF17FF /* AppDelegate.swift */; };
+		ADFDC07B1C4FF4EA00AF17FF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ADFDC07A1C4FF4EA00AF17FF /* GameScene.sks */; };
+		ADFDC07D1C4FF4EA00AF17FF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFDC07C1C4FF4EA00AF17FF /* GameScene.swift */; };
+		ADFDC07F1C4FF4EA00AF17FF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFDC07E1C4FF4EA00AF17FF /* GameViewController.swift */; };
+		ADFDC0821C4FF4EA00AF17FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFDC0801C4FF4EA00AF17FF /* Main.storyboard */; };
+		ADFDC0841C4FF4EA00AF17FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFDC0831C4FF4EA00AF17FF /* Assets.xcassets */; };
+		ADFDC0871C4FF4EA00AF17FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFDC0851C4FF4EA00AF17FF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ADFDC0751C4FF4EA00AF17FF /* PlinkADink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlinkADink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADFDC0781C4FF4EA00AF17FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADFDC07A1C4FF4EA00AF17FF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		ADFDC07C1C4FF4EA00AF17FF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		ADFDC07E1C4FF4EA00AF17FF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		ADFDC0811C4FF4EA00AF17FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADFDC0831C4FF4EA00AF17FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADFDC0861C4FF4EA00AF17FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADFDC0881C4FF4EA00AF17FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADFDC0721C4FF4EA00AF17FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADFDC06C1C4FF4EA00AF17FF = {
+			isa = PBXGroup;
+			children = (
+				ADFDC0771C4FF4EA00AF17FF /* PlinkADink */,
+				ADFDC0761C4FF4EA00AF17FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADFDC0761C4FF4EA00AF17FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADFDC0751C4FF4EA00AF17FF /* PlinkADink.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADFDC0771C4FF4EA00AF17FF /* PlinkADink */ = {
+			isa = PBXGroup;
+			children = (
+				ADFDC0781C4FF4EA00AF17FF /* AppDelegate.swift */,
+				ADFDC07A1C4FF4EA00AF17FF /* GameScene.sks */,
+				ADFDC07C1C4FF4EA00AF17FF /* GameScene.swift */,
+				ADFDC07E1C4FF4EA00AF17FF /* GameViewController.swift */,
+				ADFDC0801C4FF4EA00AF17FF /* Main.storyboard */,
+				ADFDC0831C4FF4EA00AF17FF /* Assets.xcassets */,
+				ADFDC0851C4FF4EA00AF17FF /* LaunchScreen.storyboard */,
+				ADFDC0881C4FF4EA00AF17FF /* Info.plist */,
+			);
+			path = PlinkADink;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADFDC0741C4FF4EA00AF17FF /* PlinkADink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADFDC08B1C4FF4EB00AF17FF /* Build configuration list for PBXNativeTarget "PlinkADink" */;
+			buildPhases = (
+				ADFDC0711C4FF4EA00AF17FF /* Sources */,
+				ADFDC0721C4FF4EA00AF17FF /* Frameworks */,
+				ADFDC0731C4FF4EA00AF17FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlinkADink;
+			productName = PlinkADink;
+			productReference = ADFDC0751C4FF4EA00AF17FF /* PlinkADink.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADFDC06D1C4FF4EA00AF17FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Seagull Systems";
+				TargetAttributes = {
+					ADFDC0741C4FF4EA00AF17FF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = ADFDC0701C4FF4EA00AF17FF /* Build configuration list for PBXProject "PlinkADink" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADFDC06C1C4FF4EA00AF17FF;
+			productRefGroup = ADFDC0761C4FF4EA00AF17FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADFDC0741C4FF4EA00AF17FF /* PlinkADink */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADFDC0731C4FF4EA00AF17FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADFDC07B1C4FF4EA00AF17FF /* GameScene.sks in Resources */,
+				ADFDC0871C4FF4EA00AF17FF /* LaunchScreen.storyboard in Resources */,
+				ADFDC0841C4FF4EA00AF17FF /* Assets.xcassets in Resources */,
+				ADFDC0821C4FF4EA00AF17FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADFDC0711C4FF4EA00AF17FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADFDC07D1C4FF4EA00AF17FF /* GameScene.swift in Sources */,
+				ADFDC07F1C4FF4EA00AF17FF /* GameViewController.swift in Sources */,
+				ADFDC0791C4FF4EA00AF17FF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ADFDC0801C4FF4EA00AF17FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADFDC0811C4FF4EA00AF17FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ADFDC0851C4FF4EA00AF17FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADFDC0861C4FF4EA00AF17FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADFDC0891C4FF4EA00AF17FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADFDC08A1C4FF4EA00AF17FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADFDC08C1C4FF4EB00AF17FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlinkADink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagullsystems.PlinkADink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ADFDC08D1C4FF4EB00AF17FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlinkADink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seagullsystems.PlinkADink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADFDC0701C4FF4EA00AF17FF /* Build configuration list for PBXProject "PlinkADink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADFDC0891C4FF4EA00AF17FF /* Debug */,
+				ADFDC08A1C4FF4EA00AF17FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADFDC08B1C4FF4EB00AF17FF /* Build configuration list for PBXNativeTarget "PlinkADink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADFDC08C1C4FF4EB00AF17FF /* Debug */,
+				ADFDC08D1C4FF4EB00AF17FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADFDC06D1C4FF4EA00AF17FF /* Project object */;
+}
