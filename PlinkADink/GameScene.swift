@@ -26,7 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var score = 0
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         
         
         self.physicsWorld.contactDelegate = self
@@ -42,13 +42,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func makeTopLabels() {
         self.remainingLabel = SKLabelNode(text: "Remaining: \(self.numberOfDiscs)")
-        self.remainingLabel.fontColor = UIColor.blackColor()
+        self.remainingLabel.fontColor = UIColor.black
         self.remainingLabel.fontSize = 20
         self.remainingLabel.position = CGPoint(x: self.frame.size.width * 0.25, y: self.frame.size.height - 20.0)
         self.addChild(self.remainingLabel)
         
         self.scoreLabel = SKLabelNode(text: "Score: 0")
-        self.scoreLabel.fontColor = UIColor.blackColor()
+        self.scoreLabel.fontColor = UIColor.black
         self.scoreLabel.fontSize = 20
         self.scoreLabel.position = CGPoint(x: self.frame.size.width * 0.75, y: self.frame.size.height - 20.0)
         self.addChild(self.scoreLabel)
@@ -61,29 +61,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func makeWallsAndGround() {
-        let ground = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: self.frame.size.width, height: 20))
+        let ground = SKSpriteNode(color: UIColor.red, size: CGSize(width: self.frame.size.width, height: 20))
         ground.position = CGPoint(x: self.frame.size.width/2, y: -10)
-        ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: self.frame.size.width, height: 20))
-        ground.physicsBody?.dynamic = false
+        ground.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.frame.size.width, height: 20))
+        ground.physicsBody?.isDynamic = false
         ground.physicsBody?.categoryBitMask = self.borderCategory
         self.addChild(ground)
         
-        let leftWall = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: 20, height: self.frame.size.height))
+        let leftWall = SKSpriteNode(color: UIColor.red, size: CGSize(width: 20, height: self.frame.size.height))
         leftWall.position = CGPoint(x: -10, y: self.frame.size.height/2)
-        leftWall.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 20, height: self.frame.size.height))
-        leftWall.physicsBody?.dynamic = false
+        leftWall.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 20, height: self.frame.size.height))
+        leftWall.physicsBody?.isDynamic = false
         leftWall.physicsBody?.categoryBitMask = self.borderCategory
         self.addChild(leftWall)
         
-        let rightWall = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: 20, height: self.frame.size.height))
+        let rightWall = SKSpriteNode(color: UIColor.red, size: CGSize(width: 20, height: self.frame.size.height))
         rightWall.position = CGPoint(x: self.frame.size.width + 10, y: self.frame.size.height/2)
-        rightWall.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 20, height: self.frame.size.height))
-        rightWall.physicsBody?.dynamic = false
+        rightWall.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 20, height: self.frame.size.height))
+        rightWall.physicsBody?.isDynamic = false
         rightWall.physicsBody?.categoryBitMask = self.borderCategory
         self.addChild(rightWall)
     }
     
-    func makePegs(numberOfPegsInRow : Int, numbersOfRows : Int, pegRadius : CGFloat, rowSpacing : CGFloat, yStart : CGFloat) {
+    func makePegs(_ numberOfPegsInRow : Int, numbersOfRows : Int, pegRadius : CGFloat, rowSpacing : CGFloat, yStart : CGFloat) {
         
         for rowNumber in 0...(numberOfPegsInRow - 1) {
 
@@ -103,7 +103,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let sub3 = pegSpacing * CGFloat(pegNumber)
                 peg.position = CGPoint(x: sub1 + sub2 + sub3, y: yStart + CGFloat(rowNumber) * rowSpacing)
                 peg.physicsBody = SKPhysicsBody(circleOfRadius: pegRadius)
-                peg.physicsBody?.dynamic = false
+                peg.physicsBody?.isDynamic = false
                 peg.physicsBody?.categoryBitMask = self.pegCategory
                 self.addChild(peg)
             }
@@ -114,31 +114,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let postHeight = CGFloat(80)
         
-        let post1 = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: self.postWidth, height: postHeight))
+        let post1 = SKSpriteNode(color: UIColor.red, size: CGSize(width: self.postWidth, height: postHeight))
         post1.position = CGPoint(x: self.frame.size.width  * 0.25, y: postHeight/2)
-        post1.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: self.postWidth, height: postHeight))
-        post1.physicsBody?.dynamic = false
+        post1.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.postWidth, height: postHeight))
+        post1.physicsBody?.isDynamic = false
         post1.physicsBody?.categoryBitMask = self.postCategory
         self.addChild(post1)
         
-        let post2 = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: self.postWidth, height: postHeight))
+        let post2 = SKSpriteNode(color: UIColor.red, size: CGSize(width: self.postWidth, height: postHeight))
         post2.position = CGPoint(x: self.frame.size.width * 0.45, y: postHeight/2)
-        post2.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: self.postWidth, height: postHeight))
-        post2.physicsBody?.dynamic = false
+        post2.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.postWidth, height: postHeight))
+        post2.physicsBody?.isDynamic = false
         post2.physicsBody?.categoryBitMask = self.postCategory
         self.addChild(post2)
         
-        let post3 = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: self.postWidth, height: postHeight))
+        let post3 = SKSpriteNode(color: UIColor.red, size: CGSize(width: self.postWidth, height: postHeight))
         post3.position = CGPoint(x: self.frame.size.width  * 0.55, y: postHeight/2)
-        post3.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: self.postWidth, height: postHeight))
-        post3.physicsBody?.dynamic = false
+        post3.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.postWidth, height: postHeight))
+        post3.physicsBody?.isDynamic = false
         post3.physicsBody?.categoryBitMask = self.postCategory
         self.addChild(post3)
         
-        let post4 = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: self.postWidth, height: postHeight))
+        let post4 = SKSpriteNode(color: UIColor.red, size: CGSize(width: self.postWidth, height: postHeight))
         post4.position = CGPoint(x: self.frame.size.width  * 0.75, y: postHeight/2)
-        post4.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: self.postWidth, height: postHeight))
-        post4.physicsBody?.dynamic = false
+        post4.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.postWidth, height: postHeight))
+        post4.physicsBody?.isDynamic = false
         post4.physicsBody?.categoryBitMask = self.postCategory
         self.addChild(post4)
     }
@@ -152,40 +152,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let goal1 = SKNode()
         goal1.position = CGPoint(x: bigGoalWidth / 2, y: yPosition)
-        goal1.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: bigGoalWidth, height: goalHeight))
-        goal1.physicsBody?.dynamic = false
+        goal1.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: bigGoalWidth, height: goalHeight))
+        goal1.physicsBody?.isDynamic = false
         goal1.physicsBody?.categoryBitMask = self.bigGoalCategory
         self.addChild(goal1)
         
         let xPosition2 = bigGoalWidth + self.postWidth + (mediumGoalLength / 2)
         let goal2 = SKNode()
         goal2.position = CGPoint(x: xPosition2, y: yPosition)
-        goal2.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: mediumGoalLength, height: goalHeight))
-        goal2.physicsBody?.dynamic = false
+        goal2.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: mediumGoalLength, height: goalHeight))
+        goal2.physicsBody?.isDynamic = false
         goal2.physicsBody?.categoryBitMask = self.mediumGoalCategory
         self.addChild(goal2)
         
         let xPosition3 = bigGoalWidth + self.postWidth + mediumGoalLength + self.postWidth + (smallGoalLength / 2)
         let goal3 = SKNode()
         goal3.position = CGPoint(x: xPosition3, y: yPosition)
-        goal3.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: mediumGoalLength, height: goalHeight))
-        goal3.physicsBody?.dynamic = false
+        goal3.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: mediumGoalLength, height: goalHeight))
+        goal3.physicsBody?.isDynamic = false
         goal3.physicsBody?.categoryBitMask = self.smallGoalCategory
         self.addChild(goal3)
         
         let xPosition4 = bigGoalWidth + self.postWidth * 3 + mediumGoalLength + smallGoalLength + mediumGoalLength / 2
         let goal4 = SKNode()
         goal4.position = CGPoint(x: xPosition4, y: yPosition)
-        goal4.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: mediumGoalLength, height: goalHeight))
-        goal4.physicsBody?.dynamic = false
+        goal4.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: mediumGoalLength, height: goalHeight))
+        goal4.physicsBody?.isDynamic = false
         goal4.physicsBody?.categoryBitMask = self.mediumGoalCategory
         self.addChild(goal4)
         
         let xPosition5 = bigGoalWidth + self.postWidth * 4 + mediumGoalLength + smallGoalLength + mediumGoalLength + bigGoalWidth / 2
         let goal5 = SKNode()
         goal5.position = CGPoint(x: xPosition5, y: yPosition)
-        goal5.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: bigGoalWidth, height: goalHeight))
-        goal5.physicsBody?.dynamic = false
+        goal5.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: bigGoalWidth, height: goalHeight))
+        goal5.physicsBody?.isDynamic = false
         goal5.physicsBody?.categoryBitMask = self.bigGoalCategory
         self.addChild(goal5)
         
@@ -200,48 +200,48 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         let left100 = SKLabelNode(text: "100")
-        left100.fontColor = UIColor.blackColor()
+        left100.fontColor = UIColor.black
         left100.fontSize = 20
         let XPosition = bigGoalWidth / 2
         left100.position = CGPoint(x: XPosition, y: yPosition)
         self.addChild(left100)
         
         let left200 = SKLabelNode(text: "200")
-        left200.fontColor = UIColor.blackColor()
+        left200.fontColor = UIColor.black
         left200.fontSize = 20
         let xPosition2 = bigGoalWidth + self.postWidth + (mediumGoalLength / 2)
         left200.position = CGPoint(x: xPosition2, y: yPosition)
         self.addChild(left200)
         
         let centre = SKLabelNode(text: "💰")
-        centre.fontColor = UIColor.blackColor()
+        centre.fontColor = UIColor.black
         centre.fontSize = 20
         let xPosition3 = bigGoalWidth + self.postWidth + mediumGoalLength + self.postWidth + (smallGoalLength / 2)
         centre.position = CGPoint(x: xPosition3, y: yPosition)
         self.addChild(centre)
         
         let right200 = SKLabelNode(text: "200")
-        right200.fontColor = UIColor.blackColor()
+        right200.fontColor = UIColor.black
         right200.fontSize = 20
         let xPosition4 = bigGoalWidth + self.postWidth * 3 + mediumGoalLength + smallGoalLength + mediumGoalLength / 2
         right200.position = CGPoint(x: xPosition4, y: yPosition)
         self.addChild(right200)
         
         let right100 = SKLabelNode(text: "100")
-        right100.fontColor = UIColor.blackColor()
+        right100.fontColor = UIColor.black
         right100.fontSize = 20
         let xPosition5 = bigGoalWidth + self.postWidth * 4 + mediumGoalLength + smallGoalLength + mediumGoalLength + bigGoalWidth / 2
         right100.position = CGPoint(x: xPosition5, y: yPosition)
         self.addChild(right100)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         for touch in touches {
             
             if self.discs.count >= self.numberOfDiscs {
-                self.removeChildrenInArray(self.discs)
+                self.removeChildren(in: self.discs)
                 self.discs = []
                 self.updateLabels()
                 self.score = 0
@@ -251,7 +251,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 disc.xScale = 0.05
                 disc.yScale = 0.05
-                disc.position = touch.locationInNode(self)
+                disc.position = touch.location(in: self)
                 
                 disc.physicsBody = SKPhysicsBody(circleOfRadius: disc.size.height/4)
                 disc.physicsBody?.categoryBitMask = self.discCategory
@@ -266,7 +266,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.categoryBitMask == self.bigGoalCategory || contact.bodyB.categoryBitMask == self.bigGoalCategory {
             print("big")
             self.score += 100
@@ -282,7 +282,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         updateLabels()
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
 }
